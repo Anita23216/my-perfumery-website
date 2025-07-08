@@ -1,0 +1,36 @@
+.perfumery{
+    width:100%;
+    height:auto;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    background-color: #889982;
+    padding: 20px;
+    padding-left: 0;
+    margin-left: 0;
+
+}
+.homeleftside img{
+    height: 500px;
+    padding-left: 0;
+    margin-left: 0;
+    width: 80%;
+}
+.homerightside h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-right: 20px;
+    margin-right: 50px;
+    color: #663300;
+    margin-left: 20px;
+    font-size: 80px;
+}
+.homerightside p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #f6f4f3;
+    font-size: 50px;
+    margin-top: 5px;
+    margin-left: 100px;
+    padding-top: 5px;
+    
+}

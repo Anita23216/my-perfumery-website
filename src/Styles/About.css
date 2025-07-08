@@ -1,0 +1,94 @@
+.About{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.aboutperfumery{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+}
+
+.aboutleftside h1{
+    font-size: 60px;
+    color: #663300;
+}
+.aboutleftside p{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #003300;
+}
+.aboutshopbutton{
+    font-size: 20px;
+    background-color: #889982;
+}
+.aboutshopbutton:hover{
+    background-color: #663300;
+    color: #f6f4f3;
+    border: #663300;
+}
+.Brand{
+    width: 100%;
+    height: 180px;
+}
+.brandtitle h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    color: #663300;text-align: center;
+}
+ul{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.brandtitle a{
+    color: #003300;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.aboutdescription{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px;
+}
+.forall{
+    background-color: #663300;
+    margin: 20px;
+    margin-left: 0;
+}
+
+.forall h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #f6f4f3;
+}
+.forall p{
+    font-size: 30px;
+    flex-wrap: wrap;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: black;
+}
+.AVAILABILITY{
+    background-color: #663300;
+    margin: 20px;
+    margin-right: 0;
+}
+.AVAILABILITY p{
+    font-size: 30px;
+    flex-wrap: wrap;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: black;
+}
+
+
