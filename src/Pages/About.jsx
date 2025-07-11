@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import aboutImage1 from '../assets/oilpef only.jpg';
 import '../Styles/About.css';
 function About(){
@@ -23,14 +24,18 @@ function About(){
             <div className="Brand">
                 <div className="brandtitle">
                     <h1>BRANDS</h1>
-                    <ul>
+                    <motion.ul>
+                        initial = {{ opacity: 0, y:50}}
+                        animate = {{ opacity: 1, y:0}}
+                        transition = {{ type: 'tween', duration: 1}}
+                        
                         <li><a>GIVENCHY</a></li>
                         <li><a>CHANEL</a></li>
                         <li><a>GUCCI</a></li>
                         <li><a>MOLINARD</a></li>
                         <li><a>BOUCHEROY</a></li>
                         <li><a>VERSACE</a></li>
-                    </ul>
+                    </motion.ul>
                 </div>
             </div>
             <div className="aboutdescription">
