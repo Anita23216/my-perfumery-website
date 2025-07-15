@@ -51,6 +51,7 @@
 .login-prompt span{
     color: #003300;
     font-weight: 600;
+    cursor: pointer;
 }
 .login-agree{
     display: flex;

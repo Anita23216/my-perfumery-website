@@ -1,3 +1,13 @@
+.Home-container {
+    background-color: #889982;
+    min-height: 100vh;       /* Ensures it fills at least the full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    min-width: 220vh;
+}
 .perfumery{
     width:100%;
     height:auto;

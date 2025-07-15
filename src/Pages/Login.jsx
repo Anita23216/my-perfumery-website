@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LoginImage from "../assets/girl oilpef.jpg"; 
 import "../Styles/Login.css";
 function Login(){
@@ -10,7 +11,9 @@ function Login(){
                     <input type="Email" placeholder="Email Adress"/>
                     <input type="password" placeholder="password"/>
                 </div>
-                <button className="login-button2">Continue</button>
+                <Link to="/shop">
+                    <button className="login-button2">Continue</button>
+                </Link>
                 <p className="login-prompt">Already have an account? <span>Login here</span></p>
                 <div className="login-agree">
                     <input type="checkbox" name="" id="" />
