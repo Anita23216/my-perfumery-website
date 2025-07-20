@@ -1,29 +1,43 @@
-import { Link } from "react-router-dom";
-import LoginImage from "../assets/girl oilpef.jpg"; 
+import React, { useState } from "react";
 import "../Styles/Login.css";
-function Login(){
-    return(
-        <div className="login">
-            <div className="login-cont">
-                <h1>sign up</h1>
-                <div className="login-input">
-                    <input type="text" placeholder="Your name" />
-                    <input type="Email" placeholder="Email Adress"/>
-                    <input type="password" placeholder="password"/>
-                </div>
-                <Link to="/shop">
-                    <button className="login-button2">Continue</button>
-                </Link>
-                <p className="login-prompt">Already have an account? <span>Login here</span></p>
-                <div className="login-agree">
-                    <input type="checkbox" name="" id="" />
-                    <p>By continuing, I agree to the terms of use and privacy policy. </p>
-                </div>
-            </div>
-            <div className="login-image">
-                <img src={LoginImage} />
-            </div>
+
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Login functionality coming soon!");
+  };
+
+  return (
+    <div className="login">
+      <form className="login__form" onSubmit={handleSubmit}>
+        <h1>Sign In</h1>
+        <div className="login__field">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </div>
-    )
-}
-export default Login
+        <div className="login__field">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button className="login__button" type="submit">Login</button>
+      </form>
+    </div>
+  );
+};
+
+export default Login;

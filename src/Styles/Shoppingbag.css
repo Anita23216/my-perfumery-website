@@ -5,15 +5,170 @@ body {
 }
 
 .shoppingbag {
-  max-height: 500px;
-  overflow-y: auto;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  width: 90%;
   max-width: 800px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 3rem auto 4rem auto;
+  background: var(--color-bg);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(34,34,59,0.07);
+  padding: 2.5rem 2vw 2.5rem 2vw;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin-left: 400px;
+}
+
+.shoppingbag h1 {
+  font-family: 'Playfair Display', serif;
+  color: #003300;
+  font-size: 2.2rem;
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+
+.shoppingbag__list {
+  margin-bottom: 2.5rem;
+}
+
+.shoppingbag__empty {
+  color: #003300;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem 0 2rem 0;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 2rem;
+}
+
+.shoppingbag__item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1.2rem 1.2rem 1.7rem 1.2rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.shoppingbag__item:hover {
+  box-shadow: 0 8px 32px rgba(34,34,59,0.13);
+  transform: translateY(-4px) scale(1.01);
+}
+.shoppingbag__item img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px rgba(34,34,59,0.10);
+}
+.shoppingbag__item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.shoppingbag__item-info h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #003300;
+  margin: 0;
+}
+.shoppingbag__item-price {
+  color: #003300;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.shoppingbag__item-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  margin-top: 0.5rem;
+}
+.shoppingbag__item-controls button {
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.3em 1.1em;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.shoppingbag__item-controls button:hover {
+  background: #003300;
+  color: #f6f4f3;
+  box-shadow: 0 4px 16px rgba(34,34,59,0.13);
+}
+.shoppingbag__item-qty {
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+  min-width: 2.2em;
+  text-align: center;
+}
+
+.shoppingbag__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1.2rem 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.shoppingbag__total {
+  font-size: 1.3rem;
+  color: #003300;
+  font-weight: 600;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.shoppingbag__checkout {
+  background: var(--color-primary);
+  color: #003300;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.7em 2em;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.shoppingbag__checkout:disabled {
+  background: var(--color-muted);
+  cursor: not-allowed;
+}
+.shoppingbag__checkout:hover:not(:disabled) {
+  background: var(--color-secondary);
+  color: #889982;
+  box-shadow: 0 8px 32px rgba(34,34,59,0.12);
+}
+
+@media (max-width: 700px) {
+  .shoppingbag {
+    padding: 1.2rem 1vw 1.2rem 1vw;
+  }
+  .shoppingbag__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0.7rem 1.2rem 0.7rem;
+  }
+  .shoppingbag__item img {
+    width: 80px;
+    height: 80px;
+  }
+  .shoppingbag__summary {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.2rem 1rem;
+  }
 }
 
 .shoppingbagItem {
@@ -32,22 +187,6 @@ body {
   border-radius: 10px;
 }
 
-.description {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.description p {
-  margin: 0;
-  font-size: 16px;
-  color: #333;
-}
-
-.description p b {
-  font-size: 18px;
-  color: #111;
-}
 
 .countHandler {
   display: flex;

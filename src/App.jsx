@@ -6,7 +6,7 @@ import Shop from "./Pages/Shop";
 import Login from "./Pages/Login";
 import Shoppingbag from "./Pages/Shoppingbag";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import { ShopContextProvider } from "./context/shop-context";
 function App() {
   
@@ -21,6 +21,8 @@ function App() {
             <Route path="/shop" element={<Shop/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/shoppingbag" element={<Shoppingbag/>}/>
+            <Route path="/" element={<Navigate to ="/home" replace/>}/>
+            <Route path="*" element={<Navigate to ="/home" replace/>}/>
           </Routes>
           <Footer/>
         </Router>

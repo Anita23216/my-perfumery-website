@@ -1,46 +1,112 @@
-.Home-container {
-    background-color: #889982;
-    min-height: 100vh;       /* Ensures it fills at least the full height of the viewport */
+.home{
+    width: 100%;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    min-width: 220vh;
-}
-.perfumery{
-    width:100%;
-    height:auto;
-    display: flex;
-    justify-content: space-around;
-    justify-items: center;
-    align-items: center;
-    background-color: #889982;
-    padding: 20px;
-    padding-left: 0;
-    margin-left: 0;
-
-}
-.homeleftside img{
-    height: 500px;
-    padding-left: 0;
-    margin-left: 0;
-    width: 80%;
-}
-.homerightside h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding-right: 20px;
-    margin-right: 50px;
-    color: #663300;
-    margin-left: 20px;
-    font-size: 80px;
-}
-.homerightside p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #f6f4f3;
-    font-size: 50px;
-    margin-top: 5px;
-    margin-left: 100px;
-    padding-top: 5px;
+    background: var(--color-bg);
+    margin-top: 3rem;
     
+  
+}
+.heading{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f6f4f3 60%, #663300 130%);
+    position: absolute;
+    box-shadow: 0 8px 32px rgba(34,34,59,0.07);
+    border-radius: 0 0 32px 32px;
+    margin-bottom: 2.5rem;
+    right: 0;
+    
+}
+.heading-content{
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 100px;
+}
+.heading-content h1{
+    font-family: 'Playfair Display, serif';
+    color: #003300;
+    letter-spacing: 0.04em;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+.heading-content p{
+    font-size: 1.7rem;
+    color: #663300;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-bottom: 2rem;
+}
+.featured{
+    width: 100%;
+    margin: 0 auto 3rem auto;
+    padding: 0 2vw;
+    background-color: #f5faf4;
+    margin-top: 400px;
+    margin-left: 100px;
+    
+}
+.featured h2{
+    font-family: 'Playfair Display, serif';
+    font-size: 2.2rem;
+    margin: 2rem;
+    text-align: center;
+    color: #003300;
+}
+.featured-list{
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.featured-item {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 1.2rem 1.2rem 1.7rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  width: 220px;
+  margin-bottom: 2rem;
+}
+.featured-item:hover {
+  box-shadow: 0 8px 32px rgba(34,34,59,0.13);
+  transform: translateY(-6px) scale(1.03);
+}
+.featured-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 1.1rem;
+}
+
+.featured-name {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #003300;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .heading-content h1 {
+    font-size: 2.1rem;
+  }
+  .featured-list {
+    gap: 1.2rem;
+  }
+  .featured-item {
+    width: 150px;
+    padding: 0.7rem 0.7rem 1.1rem 0.7rem;
+  }
+  .featured-item img {
+    height: 120px;
+  }
 }

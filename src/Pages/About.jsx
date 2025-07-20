@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import aboutImage1 from '../assets/oilpef only.jpg';
+import foundersImage from '../assets/girlin perfume store.jpg';
 import '../Styles/About.css';
 
 function About() {
@@ -12,20 +13,41 @@ function About() {
     <div className="About">
       <div className="aboutperfumery">
         <div className="aboutleftside">
-          <h1>ABOUT US!</h1>
+          <h1>Our Story</h1>
           <p>
-            We love it when you smell really good. Therefore our purpose is making sure you scent as nice as you want.
-            We want you to walk and feel confident scenting nice. And we have what it takes to make that happen.
+            Driven by a love for fine fragrances, Our Perfumery handpicks the most refined scents from around the globe for those with a taste for sophistication. Our story started with one goal: to blend luxury, style, and individuality into every unique creation.
           </p>
-          <Link to="/login">
-            <button className="aboutshopbutton">Shop now</button>
-          </Link>
         </div>
         <div className="aboutimage1">
           <img src={aboutImage1} alt="Perfume display" />
         </div>
       </div>
 
+
+      <div className="about-descriptions">
+        <div className="about-mission">
+          <h2>Our Mission</h2>
+          <p>
+            We believe there’s power in a beautiful scent. 
+            That’s why our purpose is to ensure you wear fragrances that reflect your essence 
+            and elevate your confidence.We want every step you take to be accompanied by a scent that speaks of elegance. 
+            And we have the artistry to make that possible.
+          </p>
+        </div>
+        <div className="about-founder">
+          <h2>Meet the Founder</h2>
+          <div className="about-founder-card">
+            <img src= {foundersImage} alt="founder's image"/>
+            <div>
+              <h3>Amelia Rose</h3>
+              <p>Perfume Curator and Founder</p>
+              <p>
+                Amelia’s lifelong love for rare scents and her dedication to craftsmanship are at the heart of My Perfumery. She travels the globe to source the finest ingredients and create unforgettable olfactory experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div className="Brand">
         <div className="brandtitle">
@@ -34,7 +56,7 @@ function About() {
             <motion.div
               className="brandMarquee"
               animate={{ x: ['100%', '-100%'] }}
-              transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
+              transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
             >
               <ul className="brandList">
                 {brands.concat(brands).map((brand, index) => (
@@ -43,24 +65,6 @@ function About() {
               </ul>
             </motion.div>
           </div>
-        </div>
-      </div>
-
-      <div className="aboutdescription">
-        <div className="forall">
-          <h1>FOR ALL</h1>
-          <p>
-            Our store contains perfumes and body sprays from different brands.
-            We have excellent fragrances suitable for men, women, and children.
-            Our prices are also good and our products are affordable.
-          </p>
-        </div>
-        <div className="AVAILABILITY">
-          <p>
-            Our store is open every day of the week.
-            Orders can be received at any time of the day,
-            and products can also be delivered to you at your destination.
-          </p>
         </div>
       </div>
     </div>

@@ -1,16 +1,24 @@
-import { FacebookLogo } from "phosphor-react";
-import {WhatsappLogo} from "phosphor-react";
-import {InstagramLogo} from "phosphor-react";
-import {LinkedinLogo} from "phosphor-react";
+
 import "../Styles/Footer.css";
 function Footer(){
     return(
-        <div className="footer">
-            <div className="socialmedia">
-                <p>&copy; 2025 JIMS PERFUMERY</p>
-                <FacebookLogo/> <WhatsappLogo/> <InstagramLogo/> <LinkedinLogo/>
+        <footer className="footer">
+            <div className="footer-content">
+                <div className="footer-brand">My Perfumery</div>
+                <div className="footer-links">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+                </div>
+                <form className="footer-newsletter" onSubmit={e => {e.preventDefault(); alert('Subscribed!')}}>
+                    <input type="email" placeholder="Subscribe to newsletter" required />
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
-        </div>
+            <div className="footer-copyright">
+                &copy; {new Date().getFullYear()} My Perfumery. All rights reserved.
+            </div>
+        </footer>
     )
 }
 export default Footer

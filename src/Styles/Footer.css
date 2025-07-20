@@ -1,25 +1,98 @@
-.footer{
-    background-color: #889982;
-    width: 100%;
-    height: 100px;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    padding: 10px;
+.footer {
+  width: 100%;
+  background: #889982;
+  color: #003300;
+  padding: 2.2rem 0 1.2rem 0;
+  border-radius: 32px 32px 0 0;
+  box-shadow: 0 -2px 16px rgba(34,34,59,0.07);
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin-top: 3rem;
+  position: absolute;
+  
 }
-.socialmedia p{
-    color: #003300;
-    font-size: 20px;
-}
-.socialmedia svg{
-    font-size: 40px;
-    margin: 5px;
-    color: #003300;
 
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 2vw 1.2rem 2vw;
 }
-.socialmedia svg:hover{
-    color: #f6f4f3;
-    background-color: #663300;
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #663300;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--color-white);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+.footer-links a:hover {
+  color: #f6f4f3;
+}
+
+.footer-newsletter {
+  display: flex;
+  gap: 0.7rem;
+}
+.footer-newsletter input {
+  padding: 0.6em 1em;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f6f4f3;
+  color: #003300;
+  outline: none;
+}
+.footer-newsletter button {
+  background: #663300;
+  color: #f6f4f3;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6em 1.5em;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.footer-newsletter button:hover {
+  background: #003300;
+  color: #889982;
+  box-shadow: 0 4px 16px rgba(224,170,255,0.13);
+}
+
+.footer-copyright {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 1rem;
+  margin-top: 1.2rem;
+}
+
+@media (max-width: 700px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 0 4vw 1.2rem 4vw;
+  }
+  .footer {
+    padding: 1.2rem 0 0.7rem 0;
+  }
 }
