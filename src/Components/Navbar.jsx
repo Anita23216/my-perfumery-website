@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { ShoppingBag } from "phosphor-react";
-import { useContext } from "react";
-import { ShopContext } from "../context/shop-context"; // Adjust path if needed
+import { useContext, useState } from "react";
+import { ShopContext } from "../context/shop-context";
 import '../Styles/Navbar.css';
 
 function Navbar() {
   const { shoppingBagItems } = useContext(ShopContext);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Calculate total quantity
   const totalItems = Object.values(shoppingBagItems).reduce((sum, item) => sum + item, 0);
@@ -15,11 +16,18 @@ function Navbar() {
       <div className="navbartitle">
         <h3>Jims Perfumery</h3>
       </div>
-      <div className="navbarheading">
-        <Link to="/home">Home</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/shop">Shop</Link>
+
+      {/* Hamburger menu for mobile */}
+      <div className="hamburger" onClick={() => setMenuOpen((prev) => !prev)}>
+        &#9776;
       </div>
+
+      <div className={`navbarheading ${menuOpen ? "show" : ""}`}>
+        <Link to="/home" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+        <Link to="/shop" onClick={() => setMenuOpen(false)}>Shop</Link>
+      </div>
+
       <div className="navbarloginbag">
         <Link to="/login"><button>Login</button></Link>
         <Link to="/shoppingbag">

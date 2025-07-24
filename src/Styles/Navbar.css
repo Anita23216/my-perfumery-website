@@ -1,178 +1,123 @@
+/* Base styles */
 .navbar {
-  position: sticky;
-  z-index: 100;
+  position: fixed;
   top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  height: 90px;
   background-color: #889982;
   text-align: center;
   align-items: center;
   padding: 0 15px;
-  backdrop-filter: blur(8px);
+  z-index: 1000;
   box-sizing: border-box;
-  flex-wrap: wrap;
 }
 
-.navbartitle {
+.navbartitle h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  color: #663300;
-  white-space: nowrap;
+  font-size: 24px;
+  color: #fff;
 }
 
 .navbarheading {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 1.2rem;
 }
 
 .navbarheading a {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 10px 15px;
-  color: #003300;
+  color: #fff;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbarheading a:hover {
-  color: #f6f4f3;
-  background-color: #663300;
-  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .navbarloginbag {
-  padding: 10px;
   display: flex;
   align-items: center;
-  position: relative;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  gap: 10px;
+  gap: 12px;
 }
 
 .navbarloginbag button {
+  padding: 6px 12px;
+  font-size: 16px;
+  border: none;
   background-color: #f6f4f3;
   color: #003300;
-  font-size: 16px;
-  padding: 5px 10px;
-  border: none;
+  border-radius: 4px;
   cursor: pointer;
-}
-
-.navbarloginbag button:hover {
-  color: #f6f4f3;
-  background-color: #663300;
-}
-
-.navbarloginbag svg {
-  color: #003300;
-  background-color: #889982;
-  font-size: 28px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.navbarloginbag svg:hover {
-  color: #f6f4f3;
-  background-color: #663300;
-  border-radius: 50%;
 }
 
 .navbagcount {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 22px;
-  height: 22px;
-  font-size: 12px;
-  color: white;
+  top: -6px;
+  right: -6px;
   background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  animation: pulse 0.3s ease;
+}
+
+/* Hamburger icon (only shown on mobile) */
+.hamburger {
+  display: none;
+  font-size: 26px;
   cursor: pointer;
+  color: #fff;
 }
 
-/* Light mode system support */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}
-
-/* ===========
-   MOBILE: max 600px
-   =========== */
-@media (max-width: 600px) {
+/* Responsive styles for phones */
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px 15px;
     height: auto;
-    padding: 10px;
-    gap: 8px;
   }
 
-  .navbartitle {
-    font-size: 1rem;
-    text-align: center;
-    width: 100%;
+  .hamburger {
+    display: block;
+    margin-left: auto;
   }
 
   .navbarheading {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
     width: 100%;
-    gap: 8px;
+    background-color: #889982;
+    margin-top: 10px;
+  }
+
+  .navbarheading.show {
+    display: flex;
   }
 
   .navbarheading a {
-    font-size: 15px;
-    padding: 6px 10px;
-    display: block;
-    width: 100%;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-top: 1px solid #fff2;
   }
 
   .navbarloginbag {
     align-self: flex-end;
-    padding: 0;
-    gap: 10px;
+    margin-top: 10px;
   }
 
   .navbarloginbag button {
     font-size: 14px;
-    padding: 4px 8px;
-  }
-
-  .navbarloginbag svg {
-    font-size: 24px;
-  }
-
-  .navbagcount {
-    top: -6px;
-    right: -8px;
-    width: 18px;
-    height: 18px;
-    font-size: 11px;
+    padding: 5px 10px;
   }
 }
 
-/* ===========
-   TABLET: 601px to 900px
-   =========== */
-@media (min-width: 601px) and (max-width: 900px) {
-  .navbar {
-    padding: 8px 18px;
+/* Pulse animation for count badge */
+@keyframes pulse {
+  0% {
+    transform: scale(1.2);
   }
-
-  .navbarheading a {
-    padding: 10px 12px;
-    font-size: 17px;
-  }
-
-  .navbartitle {
-    font-size: 1rem;
+  100% {
+    transform: scale(1);
   }
 }
