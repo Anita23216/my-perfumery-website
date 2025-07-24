@@ -158,9 +158,6 @@ ul {
   margin-bottom: 0.2rem;
 }
 
-/* ============================
-   MEDIA QUERIES FOR MOBILE
-   ============================ */
 @media (max-width: 768px) {
   .about {
     padding: 1.2rem 1vw 2rem 1vw;
@@ -169,7 +166,7 @@ ul {
   .aboutperfumery {
     flex-direction: column;
     height: auto;
-    margin-top: 60px;
+    margin-top: 180px;
     padding: 0 1rem;
     align-items: center;
     justify-content: center;

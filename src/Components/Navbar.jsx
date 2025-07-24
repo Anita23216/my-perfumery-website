@@ -8,7 +8,6 @@ function Navbar() {
   const { shoppingBagItems } = useContext(ShopContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Calculate total quantity
   const totalItems = Object.values(shoppingBagItems).reduce((sum, item) => sum + item, 0);
 
   return (
@@ -17,7 +16,6 @@ function Navbar() {
         <h3>Jims Perfumery</h3>
       </div>
 
-      {/* Hamburger menu for mobile */}
       <div className="hamburger" onClick={() => setMenuOpen((prev) => !prev)}>
         &#9776;
       </div>
