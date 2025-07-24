@@ -1,7 +1,7 @@
 .navbar {
   position: sticky;
   z-index: 100;
-  top:0;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,6 +12,7 @@
   padding: 0 15px;
   backdrop-filter: blur(8px);
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .navbartitle {
@@ -47,6 +48,7 @@
   align-items: center;
   position: relative;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  gap: 10px;
 }
 
 .navbarloginbag button {
@@ -93,6 +95,7 @@
   cursor: pointer;
 }
 
+/* Light mode system support */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -100,6 +103,9 @@
   }
 }
 
+/* ===========
+   MOBILE: max 600px
+   =========== */
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
@@ -132,7 +138,6 @@
   .navbarloginbag {
     align-self: flex-end;
     padding: 0;
-    display: flex;
     gap: 10px;
   }
 
@@ -151,7 +156,12 @@
     width: 18px;
     height: 18px;
     font-size: 11px;
+  }
 }
+
+/* ===========
+   TABLET: 601px to 900px
+   =========== */
 @media (min-width: 601px) and (max-width: 900px) {
   .navbar {
     padding: 10px 20px;
@@ -165,5 +175,4 @@
   .navbartitle {
     font-size: 1.9rem;
   }
-}
 }
