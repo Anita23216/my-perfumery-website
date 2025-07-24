@@ -112,11 +112,11 @@
     align-items: flex-start;
     height: auto;
     padding: 10px;
-    gap: 12px;
+    gap: 8px;
   }
 
   .navbartitle {
-    font-size: 1.6rem;
+    font-size: 1rem;
     text-align: center;
     width: 100%;
   }
@@ -129,7 +129,7 @@
   }
 
   .navbarheading a {
-    font-size: 16px;
+    font-size: 15px;
     padding: 6px 10px;
     display: block;
     width: 100%;
@@ -164,7 +164,7 @@
    =========== */
 @media (min-width: 601px) and (max-width: 900px) {
   .navbar {
-    padding: 10px 20px;
+    padding: 8px 18px;
   }
 
   .navbarheading a {
@@ -173,6 +173,6 @@
   }
 
   .navbartitle {
-    font-size: 1.9rem;
+    font-size: 1rem;
   }
 }

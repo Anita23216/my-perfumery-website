@@ -227,20 +227,4 @@ ul {
     height: 90px;
   }
 
-  .brandtitle h1 {
-    font-size: 1.8rem;
-    padding: 0 1rem;
-  }
-
-  
-
-  .brandList li a {
-    font-size: 0.9rem;
-  }
-
-  ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-  }
 }
